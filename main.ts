@@ -27,4 +27,4 @@ let mySprite: Sprite = null
 mySprite = sprites.create(assets.image`mysprite`, SpriteKind.Player)
 mySprite.setPosition(7, 101)
 mySprite.setVelocity(3, 0)
-radius = 20
+radius = 15
