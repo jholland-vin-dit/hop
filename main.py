@@ -1,15 +1,14 @@
-#gratiuitous comment
 def on_b_pressed():
-    global initialx, initialy, xhopped, yhopped, message
+    global index,initialx, initialy, xhopped, yhopped, message, index
+    index = 0
     mySprite.set_velocity(0, 0)
     initialx = mySprite.x
     initialy = mySprite.y
     xhopped = 0
     yhopped = 0
-    index = 0
     while index <= radius * 2:
         yhopped = Math.sqrt(radius * radius - (radius - xhopped) * (radius - xhopped))
-        message = "index:" + str(index) + "xhopped" + str(xhopped) + "yhopped:" + str(yhopped)
+        message = "index:" + ("" + str(index)) + "xhopped" + ("" + str(xhopped)) + "yhopped:" + ("" + str(yhopped))
         mySprite.x = initialx + xhopped
         mySprite.y = initialy - yhopped
         xhopped += 1
@@ -19,6 +18,7 @@ def on_b_pressed():
 controller.B.on_event(ControllerButtonEvent.PRESSED, on_b_pressed)
 
 message = ""
+index = 0
 yhopped = 0
 xhopped = 0
 initialy = 0
@@ -30,4 +30,4 @@ mySprite = sprites.create(assets.image("""
 """), SpriteKind.player)
 mySprite.set_position(7, 101)
 mySprite.set_velocity(3, 0)
-radius = 20
+radius = 15
