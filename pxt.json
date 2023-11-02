@@ -1,5 +1,5 @@
 {
-    "name": "hop2.0",
+    "name": "hop",
     "description": "",
     "dependencies": {
         "device": "*"
